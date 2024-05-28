@@ -1,0 +1,34 @@
+/usr/local/lib/python3.8/dist-packages/pep8.py:110: FutureWarning: Possible nested set at position 1
+  EXTRANEOUS_WHITESPACE_REGEX = re.compile(r'[[({] | []}),;:]')
+..............F..........................ssEEss.................................................................
+======================================================================
+ERROR: test_count (test_models.test_engine.test_db_storage.TestFileStorage)
+Tests count function
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/AirBnB_clone_v3/tests/test_models/test_engine/test_db_storage.py", line 103, in test_count
+    storage.new(state)
+NameError: name 'storage' is not defined
+
+======================================================================
+ERROR: test_get_db (test_models.test_engine.test_db_storage.TestFileStorage)
+Test the function that obtains an instage of storage
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/AirBnB_clone_v3/tests/test_models/test_engine/test_db_storage.py", line 94, in test_get_db
+    storage.new(instance)
+NameError: name 'storage' is not defined
+
+======================================================================
+FAIL: test_datetime_attributes (test_models.test_base_model.TestBaseModel)
+Test that two BaseModel instances have different datetime objects
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/AirBnB_clone_v3/tests/test_models/test_base_model.py", line 88, in test_datetime_attributes
+    self.assertTrue(tic <= inst1.created_at <= toc)
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 112 tests in 2.296s
+
+FAILED (failures=1, errors=2, skipped=4)
